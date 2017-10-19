@@ -1,21 +1,42 @@
 'use strict';
 alert('Hi there, thanks for visiting my portfolio!');
 
-var user = prompt('What is your name?');
-console.log('user:', user);
+function question(qtnTxt) {
+  var result = prompt(qtnTxt);
+  console.log(qtnTxt, ':', result);
+  return result;
+}
+
+//Ask first question for user name with function
+var user;
+user = question('What is your name?');
 alert('Hi there ' + user + ' , I\'m going to ask you a question:');
-var answer = prompt(user + ' this is a yes/no question. Please answer with Y or N. Have you seen my work?');
-console.log('users answer:', answer);
+
+//question 2 text
+var answer;
+answer = question (user + ' this is a yes/no question. Please answer with Y or N. Have you seen my work?');
 if (answer.toUpperCase() === 'Y' || answer.toUpperCase() === 'YES') {
   alert('Great!');
 } else {
   alert('Well, thanks for visiting my site');
 }
+
+
 alert('I am gonna ask you another question?');
-var profession = prompt(user + ',  what is your profession?');
-console.log('profession:', profession);
-alert('Nice, I always thought being a ' + profession + ' was hard!');
-var lovedIt = prompt(user + ' do you like being an ' + profession + '?');
+var profession;
+profession = question(user + ', what is your profession?');
+
+//if first letter of profession is a vowel make 'an'
+var aOrAn;
+if (profession.charAt(0) === 'a' || profession.charAt(0) === 'e' || profession.charAt(0) === 'i' || profession.charAt(0) === 'o' || profession.charAt(0) === 'u') {
+  aOrAn = 'an';
+} else {
+//if not (else) then make 'a'
+  aOrAn = 'a';
+}
+alert('Nice, I always thought being ' + aOrAn + ' ' + profession + ' was hard!');
+
+var lovedIt = prompt(user + ' do you like being ' + aOrAn + ' ' + profession + '?');
 console.log('loved it:', lovedIt);
 if (lovedIt === 'Y') {
   alert('Awesome, I enjoy being a developer!');
