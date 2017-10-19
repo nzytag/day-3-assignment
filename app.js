@@ -29,7 +29,7 @@ alert('Thanks ' + user + ' im sure you\'ll enjoy what you\'ll see!');
 alert('Let\'s play a little guessing game');
 
 var languages = ['HTML', 'CSS', 'JAVASCRIPT'];
-var answer = prompt('What languages I have learned?');
+var input = prompt('What languages I have learned?');
 var flag = false;
 var guesses = 3;
 while (guesses > 0 && flag === false) {
@@ -37,7 +37,7 @@ while (guesses > 0 && flag === false) {
   for (var i = 0; i < languages.length; i++ ) {
     console.log('each iteration:', languages[i]);
     //do stuff here
-    if (answer.toUpperCase() === languages[i]) {
+    if (input.toUpperCase() === languages[i]) {
       alert('nice job!  you got it right!');
       flag = true;
       break;
@@ -45,7 +45,7 @@ while (guesses > 0 && flag === false) {
 
   }
   if (!flag) {
-    answer = prompt('try again');
+    input = prompt('try again');
 
   }
 }
