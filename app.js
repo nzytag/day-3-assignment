@@ -57,20 +57,12 @@ while (guesses > 0 && flag === false) {
   guesses--;
   for (var i = 0; i < languages.length; i++ ) {
     console.log('each iteration:', languages[i]);
-    //do stuff here
     if (info.toUpperCase() === languages[i]) {
       alert('nice job!  you got it right!');
       flag = true;
       break;
     }
 
-  }
-  if (!flag) {
-    input = prompt('try again');
-
-  }
-}
 if (!flag) {
   alert('nope, you are wrong!');
 }
-//uploaded
