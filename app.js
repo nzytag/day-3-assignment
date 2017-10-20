@@ -62,7 +62,12 @@ while (guesses > 0 && flag === false) {
       flag = true;
       break;
     }
+  }
+  if (!flag) {
+    input = prompt('try again');
 
+  }
+}
 if (!flag) {
   alert('nope, you are wrong!');
 }
