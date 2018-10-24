@@ -1,14 +1,16 @@
 'use strict';
+
 alert('Hi there, thanks for visiting my portfolio!');
 
-function question(qtnTxt) {
-  var result = prompt(qtnTxt);
-  console.log(qtnTxt, ':', result);
+function question(questionTxt) {
+  var result = prompt(questionTxt);
+  console.log(questionTxt, ':', result);  
   return result;
 }
 
 //Ask first question for user name with function
 var user;
+
 user = question('What is your name?');
 alert('Hi there ' + user + ' , I\'m going to ask you a question:');
 
@@ -47,7 +49,10 @@ var time = prompt('By the way, do you have time to browse through my site?');
 console.log('time to visit my :', time);
 alert('Thanks ' + user + ' im sure you\'ll enjoy what you\'ll see!');
 
-alert('Let\'s play a little guessing game');
+
+
+
+alert('Let\'s play a little guessing game. You have 3 guesses to find one language I have learned');
 
 var languages = ['HTML', 'CSS', 'JAVASCRIPT'];
 var info = prompt('What languages I have learned?');
@@ -56,7 +61,7 @@ var guesses = 3;
 while (guesses > 0 && flag === false) {
   guesses--;
   for (var i = 0; i < languages.length; i++ ) {
-    console.log('each iteration:', languages[i]);
+    console.log('guesses');
     if (info.toUpperCase() === languages[i]) {
       alert('nice job!  you got it right!');
       flag = true;
@@ -64,10 +69,10 @@ while (guesses > 0 && flag === false) {
     }
   }
   if (!flag) {
-    input = prompt('try again');
+    info = prompt('try again');
 
   }
 }
 if (!flag) {
-  alert('nope, you are wrong!');
+  alert('I guess we need to spend more time to know each other');
 }

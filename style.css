@@ -21,11 +21,15 @@ h2 {
   margin-bottom: 5px;
 }
 
-img {
-    border-radius: 8px;
+#images{
+  text-align:center;
 }
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.9);
+
+.projects {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; 
 }
 
 .footerholder {
